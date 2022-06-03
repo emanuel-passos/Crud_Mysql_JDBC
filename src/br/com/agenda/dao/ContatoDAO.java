@@ -2,7 +2,7 @@ package br.com.agenda.dao;
 
 import java.sql.Date;
 
-import com.mysql.jdbc.PreparedStatement;
+import java.sql.PreparedStatement;
 
 import br.com.agenda.factory.ConnectionFactory;
 import br.com.agenda.model.Contato;
@@ -11,7 +11,7 @@ public class ContatoDAO {
 	
 	public void save(Contato contato) {
 		
-		String sql = "INSERT INTO contatos(nome, idade, dataCadastro VALUES (?, ?, ?)";
+		String sql = "INSERT INTO contatos(nome, idade, dataCadastro) VALUES (?, ?, ?)";
 		
 		java.sql.Connection conn = null;
 		PreparedStatement pstm = null;
