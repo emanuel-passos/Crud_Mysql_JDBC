@@ -9,15 +9,21 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		ContatoDAO contatooDao = new ContatoDAO();
+		ContatoDAO contatoDao = new ContatoDAO();
 		
 		Contato contato = new Contato();
 		
-		contato.setNome("Emanuel");
-		contato.setIdade(23);
+		contato.setNome("João");
+		contato.setIdade(30);
 		contato.setDataCadastro(new Date());
 		
-		contatooDao.save(contato);
+		contatoDao.save(contato);
+		
+		//visualizacao dos registros
+		
+		for (Contato c : contatoDao.getContatos()) {
+			System.out.println("Contatos: " + c.getNome());
+		}
 
 	}
 
