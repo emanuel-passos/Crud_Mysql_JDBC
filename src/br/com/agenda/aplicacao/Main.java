@@ -19,7 +19,18 @@ public class Main {
 		
 		contatoDao.save(contato);
 		
-		//visualizacao dos registros
+		//Atuyalizar contato
+		
+		Contato c1 = new Contato();
+		
+		c1.setNome("Emanuel2");
+		c1.setIdade(47);
+		c1.setDataCadastro(new Date());
+		c1.setId(4);
+		
+		contatoDao.update(c1);
+		
+				//visualizacao dos registros
 		
 		for (Contato c : contatoDao.getContatos()) {
 			System.out.println("Contatos: " + c.getNome());
