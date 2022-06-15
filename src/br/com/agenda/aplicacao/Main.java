@@ -21,6 +21,7 @@ public class Main {
 		
 		//Atuyalizar contato
 		
+		/*
 		Contato c1 = new Contato();
 		
 		c1.setNome("Emanuel2");
@@ -29,8 +30,13 @@ public class Main {
 		c1.setId(4);
 		
 		contatoDao.update(c1);
+		*/
 		
-				//visualizacao dos registros
+		//Delete por id
+		
+		contatoDao.deleteById(1);
+		
+		//visualizacao dos registros
 		
 		for (Contato c : contatoDao.getContatos()) {
 			System.out.println("Contatos: " + c.getNome());
